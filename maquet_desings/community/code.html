@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72@1,400..800&amp;family=Manrope:wght@200..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#2a1700",
+              "on-secondary-container": "#b0b2ff",
+              "secondary-container": "#3131c0",
+              "primary-fixed-dim": "#4edea3",
+              "on-primary-fixed": "#002113",
+              "tertiary-container": "#e29100",
+              "on-secondary-fixed-variant": "#2f2ebe",
+              "surface-bright": "#33394a",
+              "surface-container-high": "#242a3a",
+              "secondary-fixed": "#e1e0ff",
+              "secondary": "#c0c1ff",
+              "secondary-fixed-dim": "#c0c1ff",
+              "on-tertiary": "#472a00",
+              "on-error-container": "#ffdad6",
+              "on-surface": "#dde2f8",
+              "on-primary": "#003824",
+              "on-error": "#690005",
+              "error-container": "#93000a",
+              "on-secondary-fixed": "#07006c",
+              "tertiary": "#ffb95f",
+              "surface-container-highest": "#2f3445",
+              "inverse-surface": "#dde2f8",
+              "surface-container-low": "#151b2b",
+              "on-tertiary-fixed-variant": "#653e00",
+              "surface": "#0d1322",
+              "surface-container-lowest": "#080e1d",
+              "error": "#ffb4ab",
+              "on-primary-fixed-variant": "#005236",
+              "on-secondary": "#1000a9",
+              "primary": "#4edea3",
+              "primary-fixed": "#6ffbbe",
+              "on-primary-container": "#00422b",
+              "primary-container": "#10b981",
+              "outline-variant": "#3c4a42",
+              "tertiary-fixed-dim": "#ffb95f",
+              "background": "#0d1322",
+              "outline": "#86948a",
+              "surface-container": "#191f2f",
+              "surface-tint": "#4edea3",
+              "on-surface-variant": "#bbcabf",
+              "on-tertiary-container": "#523200",
+              "on-background": "#dde2f8",
+              "inverse-on-surface": "#2a3040",
+              "inverse-primary": "#006c49",
+              "surface-dim": "#0d1322",
+              "tertiary-fixed": "#ffddb8",
+              "surface-variant": "#2f3445"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0d1322;
+            color: #dde2f8;
+            font-family: 'Manrope', sans-serif;
+        }
+        .serif-headline { font-family: 'Newsreader', serif; }
+        .mono-data { font-family: 'Space Grotesk', monospace; }
+        
+        /* Custom Heatmap Visualization Styles */
+        .heatmap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+            gap: 4px;
+        }
+        .heatmap-cell {
+            aspect-ratio: 1;
+            border-radius: 2px;
+            transition: transform 0.2s ease;
+        }
+        .heatmap-cell:hover {
+            transform: scale(1.15);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen overflow-x-hidden">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-[#0d1322] border-r border-[#151b2b] flex flex-col py-8 px-6 z-50">
+<div class="mb-12">
+<h1 class="font-headline text-xl font-bold tracking-widest text-white">HOLD / LINE</h1>
+<p class="font-body text-[10px] uppercase tracking-[0.2em] text-slate-500 mt-1">The Stoic Anchor</p>
+</div>
+<nav class="flex-1 space-y-4">
+<a class="flex items-center gap-4 text-slate-500 pl-4 hover:bg-[#151b2b] hover:text-white transition-all py-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body font-medium text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 text-slate-500 pl-4 hover:bg-[#151b2b] hover:text-white transition-all py-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-body font-medium text-sm">My Thesis</span>
+</a>
+<a class="flex items-center gap-4 text-slate-500 pl-4 hover:bg-[#151b2b] hover:text-white transition-all py-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-body font-medium text-sm">Scores</span>
+</a>
+<a class="flex items-center gap-4 text-[#4edea3] border-l-2 border-[#4edea3] pl-4 transition-all py-2" href="#">
+<span class="material-symbols-outlined" data-icon="group" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-body font-medium text-sm">Community</span>
+</a>
+<a class="flex items-center gap-4 text-slate-500 pl-4 hover:bg-[#151b2b] hover:text-white transition-all py-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body font-medium text-sm">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-8 border-t border-[#151b2b]">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="account_circle">account_circle</span>
+</div>
+<div>
+<p class="font-body text-xs font-semibold text-white">Alex Rivera</p>
+<p class="font-body text-[10px] text-slate-500">Tier: Diamond Hand</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-40 bg-[#0d1322] flex justify-between items-center w-full px-12 py-6">
+<div class="flex items-center gap-8">
+<span class="font-label text-[10px] tracking-widest text-slate-400 uppercase">Global Conviction Score: <span class="text-primary">78/100</span></span>
+<span class="font-label text-[10px] tracking-widest text-slate-400 uppercase">Market Health: <span class="text-primary">Volatile but Strong</span></span>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-slate-400 hover:text-primary transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full border-2 border-background"></span>
+</button>
+</div>
+</header>
+<section class="px-12 py-12 max-w-7xl mx-auto">
+<!-- Page Header -->
+<div class="mb-20 flex justify-between items-end">
+<div class="max-w-2xl">
+<h2 class="font-headline text-5xl font-bold tracking-tight text-white mb-6 italic">Collective Resilience</h2>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed">
+                        A sanctuary of aggregated data. No noise, no speculation—only the distilled conviction of the HoldLine collective. We measure the pulse of the long-term perspective.
+                    </p>
+</div>
+<div class="text-right">
+<p class="font-label text-sm text-slate-500 mb-1 uppercase tracking-tighter">Total Assets Staked</p>
+<p class="font-label text-4xl font-bold text-primary">$1.24B</p>
+</div>
+</div>
+<!-- Global Conviction Heatmap Dashboard -->
+<div class="grid grid-cols-12 gap-10 mb-24">
+<div class="col-span-12 lg:col-span-8 bg-surface-container rounded-xl p-8 relative overflow-hidden group">
+<div class="flex justify-between items-center mb-10">
+<h3 class="font-headline text-2xl text-white">Market Sentiment Heatmap</h3>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-primary-container rounded-sm"></span>
+<span class="font-label text-[10px] text-slate-400">HOLD</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-surface-container-highest rounded-sm"></span>
+<span class="font-label text-[10px] text-slate-400">ACCUMULATE</span>
+</div>
+</div>
+</div>
+<div class="heatmap-grid">
+<!-- Simulated Heatmap Cells -->
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary-container opacity-80"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container opacity-60"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary-container opacity-40"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container opacity-90"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container opacity-70"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container opacity-50"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container opacity-80"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container opacity-70"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container opacity-40"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container opacity-90"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container opacity-60"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container opacity-30"></div>
+<div class="heatmap-cell bg-primary"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary-container"></div>
+<div class="heatmap-cell bg-primary"></div>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant/20 flex justify-between items-center">
+<div class="flex items-center gap-6">
+<div>
+<span class="font-label text-[10px] text-slate-500 block">Avg. Hold Duration</span>
+<span class="font-label text-xl text-white">842 Days</span>
+</div>
+<div>
+<span class="font-label text-[10px] text-slate-500 block">Daily Buy/Sell Ratio</span>
+<span class="font-label text-xl text-white">4.2 : 1</span>
+</div>
+</div>
+<button class="bg-primary-container text-on-primary-container font-body px-6 py-2 rounded-lg text-sm font-bold flex items-center gap-2">
+                            Add Your Conviction <span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-6">
+<div class="bg-surface-container rounded-xl p-8 flex-1 border-l-4 border-primary">
+<h4 class="font-headline text-lg text-white mb-4">The Stoic Pulse</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed mb-6">
+                            "The market is a device for transferring money from the impatient to the patient."
+                        </p>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label text-[10px] text-slate-400">AGGREGATE PATIENCE</span>
+<span class="font-label text-[10px] text-primary">92%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-[92%] h-full bg-primary shadow-[0_0_8px_rgba(78,222,163,0.4)]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label text-[10px] text-slate-400">ANTI-FUD INDEX</span>
+<span class="font-label text-[10px] text-primary">85%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-[85%] h-full bg-primary shadow-[0_0_8px_rgba(78,222,163,0.4)]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-xl p-8 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-4" data-icon="shield" style="font-variation-settings: 'FILL' 1;">shield</span>
+<h4 class="font-headline text-xl text-white mb-2">Verified Anonymity</h4>
+<p class="font-body text-xs text-on-surface-variant">Data is aggregated via zero-knowledge proofs. Your identity is your own; your conviction is the community's strength.</p>
+</div>
+</div>
+</div>
+<!-- Thesis Hall of Fame -->
+<div class="mb-12">
+<div class="flex items-center gap-4 mb-12">
+<h3 class="font-headline text-3xl text-white italic">Thesis Hall of Fame</h3>
+<div class="flex-1 h-px bg-outline-variant opacity-20"></div>
+<span class="font-label text-[10px] tracking-widest text-slate-500 uppercase">Top Long-Term Arguments</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Thesis Card 1 -->
+<div class="bg-surface-container p-8 rounded-xl hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center gap-3 mb-6">
+<span class="font-label text-xs text-primary bg-primary/10 px-2 py-1 rounded">BITCOIN</span>
+<span class="font-label text-[10px] text-slate-500">CONVICTION: 98%</span>
+</div>
+<h4 class="font-headline text-2xl text-white mb-4 leading-snug">The Digital Scarcity Anchor</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed mb-8">
+                            In an era of infinite monetary expansion, absolute scarcity is the only hedge. We hold because mathematics is more reliable than institutional policy.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-background flex items-center justify-center text-[10px]">ZH</div>
+<div class="w-6 h-6 rounded-full bg-primary-container border border-background flex items-center justify-center text-[10px] text-on-primary-container">HL</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-background flex items-center justify-center text-[10px]">MK</div>
+</div>
+<span class="font-label text-[10px] text-slate-500 uppercase">4.2k Endorsements</span>
+</div>
+</div>
+<!-- Thesis Card 2 -->
+<div class="bg-surface-container p-8 rounded-xl hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center gap-3 mb-6">
+<span class="font-label text-xs text-primary bg-primary/10 px-2 py-1 rounded">ETHEREUM</span>
+<span class="font-label text-[10px] text-slate-500">CONVICTION: 84%</span>
+</div>
+<h4 class="font-headline text-2xl text-white mb-4 leading-snug">The Settlement Layer of Value</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed mb-8">
+                            Assets migrate to where trust is automated. The utility of a programmable global ledger far outweighs cyclical price volatility.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full bg-primary-container border border-background flex items-center justify-center text-[10px] text-on-primary-container">AD</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-background flex items-center justify-center text-[10px]">PQ</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-background flex items-center justify-center text-[10px]">RY</div>
+</div>
+<span class="font-label text-[10px] text-slate-500 uppercase">2.8k Endorsements</span>
+</div>
+</div>
+<!-- Thesis Card 3 -->
+<div class="bg-surface-container p-8 rounded-xl hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center gap-3 mb-6">
+<span class="font-label text-xs text-primary bg-primary/10 px-2 py-1 rounded">SOLANA</span>
+<span class="font-label text-[10px] text-slate-500">CONVICTION: 72%</span>
+</div>
+<h4 class="font-headline text-2xl text-white mb-4 leading-snug">High-Performance Decentralization</h4>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed mb-8">
+                            Speed is a feature, not a trade-off. Building for the next billion users requires throughput that rivals traditional finance.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-background flex items-center justify-center text-[10px]">SM</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-background flex items-center justify-center text-[10px]">TY</div>
+<div class="w-6 h-6 rounded-full bg-primary-container border border-background flex items-center justify-center text-[10px] text-on-primary-container">HL</div>
+</div>
+<span class="font-label text-[10px] text-slate-500 uppercase">1.5k Endorsements</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Data Cluster -->
+<div class="mt-24 bg-surface-container-low rounded-xl p-12 flex flex-col md:flex-row justify-between items-center gap-12">
+<div class="flex-1">
+<h3 class="font-headline text-2xl text-white mb-4 italic">The Silent Consensus</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">
+                        Every 24 hours, HoldLine aggregates the cryptographic proof of holding from all participants to update the Global Conviction Score. No bots, no sentiment manipulation—just chain reality.
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-8 shrink-0">
+<div class="text-center p-6 bg-surface-container rounded-lg">
+<p class="font-label text-[10px] text-slate-500 uppercase mb-2">Unique Wallets</p>
+<p class="font-label text-2xl font-bold text-white">42,891</p>
+</div>
+<div class="text-center p-6 bg-surface-container rounded-lg">
+<p class="font-label text-[10px] text-slate-500 uppercase mb-2">Verified Conviction</p>
+<p class="font-label text-2xl font-bold text-primary">88.4%</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="px-12 py-12 border-t border-outline-variant/10 text-center">
+<p class="font-label text-[10px] text-slate-600 uppercase tracking-widest">HoldLine Protocol © 2024 • Built for the Patient Ones</p>
+</footer>
+</main>
+</body></html>

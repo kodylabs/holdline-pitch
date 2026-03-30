@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HoldLine | Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&amp;family=Manrope:wght@200..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "error-container": "#93000a",
+                        "surface-container-highest": "#2f3445",
+                        "secondary": "#c0c1ff",
+                        "on-tertiary-container": "#523200",
+                        "tertiary-fixed": "#ffddb8",
+                        "primary-container": "#10b981",
+                        "secondary-container": "#3131c0",
+                        "outline-variant": "#3c4a42",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "surface": "#0d1322",
+                        "on-primary-fixed-variant": "#005236",
+                        "on-primary-fixed": "#002113",
+                        "primary-fixed": "#6ffbbe",
+                        "secondary-fixed": "#e1e0ff",
+                        "on-secondary-container": "#b0b2ff",
+                        "on-secondary-fixed-variant": "#2f2ebe",
+                        "tertiary-container": "#e29100",
+                        "on-primary": "#003824",
+                        "surface-container-low": "#151b2b",
+                        "surface-dim": "#0d1322",
+                        "inverse-on-surface": "#2a3040",
+                        "tertiary": "#ffb95f",
+                        "on-secondary-fixed": "#07006c",
+                        "surface-container-lowest": "#080e1d",
+                        "outline": "#86948a",
+                        "surface-variant": "#2f3445",
+                        "surface-bright": "#33394a",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#2a1700",
+                        "on-background": "#dde2f8",
+                        "on-error": "#690005",
+                        "inverse-surface": "#dde2f8",
+                        "surface-container": "#191f2f",
+                        "surface-container-high": "#242a3a",
+                        "on-secondary": "#1000a9",
+                        "primary-fixed-dim": "#4edea3",
+                        "error": "#ffb4ab",
+                        "background": "#0d1322",
+                        "surface-tint": "#4edea3",
+                        "inverse-primary": "#006c49",
+                        "on-surface": "#dde2f8",
+                        "on-primary-container": "#00422b",
+                        "on-surface-variant": "#bbcabf",
+                        "on-tertiary": "#472a00",
+                        "secondary-fixed-dim": "#c0c1ff",
+                        "primary": "#4edea3"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Space Grotesk", "monospace"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0d1322;
+            color: #dde2f8;
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mono-data {
+            font-family: 'Space Grotesk', monospace;
+        }
+        .serif-title {
+            font-family: 'Newsreader', serif;
+        }
+        /* Hide scrollbar */
+        ::-webkit-scrollbar { display: none; }
+        * { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="flex min-h-screen overflow-hidden">
+<!-- SideNavBar (Shared Component Blueprint) -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-[#0d1322] border-r border-[#151b2b] flex flex-col py-8 px-6 z-50">
+<!-- Logo -->
+<div class="mb-12">
+<h1 class="font-['Newsreader'] text-xl font-bold tracking-widest text-white">
+                HOLD <span class="text-[#4edea3]">/ LINE</span>
+</h1>
+<p class="font-['Manrope'] font-medium text-[10px] tracking-[0.2em] text-slate-500 uppercase mt-1">The Stoic Anchor</p>
+</div>
+<!-- Navigation -->
+<nav class="flex-grow space-y-4">
+<!-- Dashboard (Active) -->
+<a class="flex items-center gap-4 py-2 text-[#4edea3] border-l-2 border-[#4edea3] pl-4 transition-all bg-[#151b2b]/50" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-['Manrope'] font-medium text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 py-2 text-slate-500 pl-4 hover:bg-[#151b2b] hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-['Manrope'] font-medium text-sm">My Thesis</span>
+</a>
+<a class="flex items-center gap-4 py-2 text-slate-500 pl-4 hover:bg-[#151b2b] hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-['Manrope'] font-medium text-sm">Scores</span>
+</a>
+<a class="flex items-center gap-4 py-2 text-slate-500 pl-4 hover:bg-[#151b2b] hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-['Manrope'] font-medium text-sm">Community</span>
+</a>
+</nav>
+<!-- Footer Profile/Settings -->
+<div class="mt-auto pt-8 border-t border-[#151b2b]">
+<a class="flex items-center gap-4 py-2 text-slate-500 pl-4 hover:bg-[#151b2b] hover:text-white transition-all mb-4" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Manrope'] font-medium text-sm">Settings</span>
+</a>
+<div class="flex items-center gap-3 pl-4">
+<img alt="Alex Rivera" class="w-8 h-8 rounded-full border border-[#4edea3]/30 object-cover" data-alt="Close-up portrait of a professional man in a minimalist studio setting with soft side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvu2hrXS2kOX9CE9Id07QVkf0juQFD007bfWTyPnxTdpFXjrI7Ja1x06oV4yNb_bMyT9vg-8afhQoVDTzkgX6oHXyuDNRKnDjfFi2zzqT4CAWhROx6k7mRFkC_z0cMeFOnLOY8nu_muMEqNpAJAbRfVg6Et6zoaW1-WozsNYN7aZKk8mkkWHYyZT2u1ky7T9eHX4eJfwXtOXAtwoK9npSEQkTQM6zXB1FFhC2pmOJMRzE-Gc1TTqQFQMUxUkBEK1NZGFuovLGX1LtY"/>
+<div>
+<p class="font-['Manrope'] font-bold text-xs text-white">Alex Rivera</p>
+<p class="font-['Space Grotesk'] text-[10px] text-slate-500 uppercase tracking-wider">Convicted Holder</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 flex-1 bg-[#0d1322] min-h-screen overflow-y-auto px-12 py-8 relative">
+<!-- TopAppBar (Shared Component Logic) -->
+<header class="flex justify-between items-center mb-16">
+<div>
+<h2 class="serif-title text-4xl font-bold tracking-tight text-white mb-2">Good morning, Alex</h2>
+<p class="font-body text-slate-400">Your conviction check for this week</p>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-3 bg-surface-container px-4 py-2 rounded-xl border border-outline-variant/20">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label text-xs font-medium text-primary tracking-wide">Thesis active since March 2026</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="relative w-10 h-10 flex items-center justify-center rounded-full bg-surface-container text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+</div>
+</div>
+</header>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+<!-- Overall Conviction Score -->
+<div class="bg-[#151b2b] p-8 rounded-xl relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:scale-110 transition-transform duration-700">
+<span class="material-symbols-outlined text-9xl">shield_with_heart</span>
+</div>
+<p class="font-body text-xs text-slate-400 uppercase tracking-[0.2em] mb-6">Overall Conviction Score</p>
+<div class="flex items-end gap-6 mb-8">
+<h3 class="mono-data text-7xl font-bold text-primary">74%</h3>
+<div class="mb-2">
+<div class="w-12 h-12 relative flex items-center justify-center">
+<svg class="absolute inset-0 w-full h-full -rotate-90">
+<circle class="text-surface-container-highest" cx="24" cy="24" fill="transparent" r="20" stroke="currentColor" stroke-width="3"></circle>
+<circle class="text-primary" cx="24" cy="24" fill="transparent" r="20" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="32.6" stroke-width="3"></circle>
+</svg>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+</div>
+</div>
+<p class="font-body text-sm text-slate-300 leading-relaxed">
+                    Moderate — <span class="text-primary">2 hypotheses strong</span>, <span class="text-tertiary">1 needs attention</span>.
+                </p>
+</div>
+<!-- Community Average -->
+<div class="bg-[#151b2b] p-8 rounded-xl group">
+<p class="font-body text-xs text-slate-400 uppercase tracking-[0.2em] mb-6">Community Average</p>
+<div class="flex items-center gap-4 mb-8">
+<h3 class="mono-data text-7xl font-bold text-slate-200">68%</h3>
+<div class="flex items-center text-primary bg-primary/10 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="mono-data text-sm font-bold ml-1">+3%</span>
+</div>
+</div>
+<p class="font-body text-sm text-slate-400">Stable sentiment across peer group. Your conviction remains 6% above average.</p>
+</div>
+<!-- Thesis Age -->
+<div class="bg-[#151b2b] p-8 rounded-xl group">
+<p class="font-body text-xs text-slate-400 uppercase tracking-[0.2em] mb-6">Thesis Age</p>
+<div class="mb-8">
+<h3 class="mono-data text-7xl font-bold text-slate-200">32<span class="text-2xl ml-2 font-body text-slate-500">days</span></h3>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex -space-x-2">
+<span class="w-6 h-6 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center text-[10px] text-primary">1</span>
+<span class="w-6 h-6 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center text-[10px] text-primary">2</span>
+<span class="w-6 h-6 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center text-[10px] text-primary">3</span>
+<span class="w-6 h-6 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center text-[10px] text-primary">4</span>
+</div>
+<p class="font-body text-sm text-slate-300">4 weekly reviews completed</p>
+</div>
+</div>
+</section>
+<!-- Asymmetric Detailed Content -->
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+<!-- Left: Hypothesis Health (3 cols) -->
+<div class="lg:col-span-3">
+<div class="flex justify-between items-baseline mb-8">
+<h4 class="serif-title text-2xl font-bold text-white">Hypothesis Health</h4>
+<a class="text-xs font-label uppercase text-slate-500 tracking-widest hover:text-primary transition-colors" href="#">Audit Detail</a>
+</div>
+<div class="space-y-6">
+<!-- Item 1 -->
+<div class="bg-surface-container p-6 rounded-xl border-l-2 border-primary">
+<div class="flex justify-between items-center mb-4">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<h5 class="font-body font-medium text-slate-200">L2 adoption accelerates via retail wallet integration</h5>
+</div>
+<span class="mono-data text-primary font-bold">78%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary shadow-[0_0_8px_rgba(78,222,163,0.4)] w-[78%] transition-all duration-1000"></div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container p-6 rounded-xl border-l-2 border-primary">
+<div class="flex justify-between items-center mb-4">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<h5 class="font-body font-medium text-slate-200">ETH staking yields remain &gt;3.5% annually</h5>
+</div>
+<span class="mono-data text-primary font-bold">85%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary shadow-[0_0_8px_rgba(78,222,163,0.4)] w-[85%] transition-all duration-1000"></div>
+</div>
+</div>
+<!-- Item 3 - Warning -->
+<div class="bg-surface-container p-6 rounded-xl border-l-2 border-tertiary">
+<div class="flex justify-between items-center mb-4">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<h5 class="font-body font-medium text-slate-200">2028 timeline for institutional self-custody</h5>
+<span class="material-symbols-outlined text-tertiary text-lg">warning</span>
+</div>
+<span class="mono-data text-tertiary font-bold">45%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary shadow-[0_0_8px_rgba(255,185,95,0.4)] w-[45%] transition-all duration-1000"></div>
+</div>
+<p class="mt-4 text-xs text-slate-500 italic">Structural delay in regulatory clarity is impacting this hypothesis timeline.</p>
+</div>
+</div>
+</div>
+<!-- Right: Key Signals (2 cols) -->
+<div class="lg:col-span-2">
+<div class="flex justify-between items-baseline mb-8">
+<h4 class="serif-title text-2xl font-bold text-white">This Week's Key Signals</h4>
+<span class="text-[10px] font-label uppercase text-slate-500 tracking-tighter">Updated 2h ago</span>
+</div>
+<div class="relative pl-8 space-y-10">
+<!-- Vertical line for feed -->
+<div class="absolute left-[3px] top-2 bottom-2 w-[1px] bg-outline-variant/30"></div>
+<!-- Signal 1 -->
+<div class="relative">
+<span class="absolute -left-[32px] top-1.5 w-2 h-2 rounded-full bg-primary ring-4 ring-[#0d1322]"></span>
+<p class="font-body text-sm text-slate-300">Arbitrum TVL reached $18B — new all-time high confirms L2 scaling thesis.</p>
+<p class="mono-data text-[10px] text-slate-500 mt-1 uppercase">Today • 08:42 AM</p>
+</div>
+<!-- Signal 2 -->
+<div class="relative">
+<span class="absolute -left-[32px] top-1.5 w-2 h-2 rounded-full bg-primary ring-4 ring-[#0d1322]"></span>
+<p class="font-body text-sm text-slate-300">EIP-4844 blob fees down 40% this quarter, improving network efficiency.</p>
+<p class="mono-data text-[10px] text-slate-500 mt-1 uppercase">Yesterday • 14:15 PM</p>
+</div>
+<!-- Signal 3 -->
+<div class="relative">
+<span class="absolute -left-[32px] top-1.5 w-2 h-2 rounded-full bg-tertiary ring-4 ring-[#0d1322]"></span>
+<p class="font-body text-sm text-slate-300 italic">Vitalik expressed concern over centralized sequencer risks in recent blog.</p>
+<p class="mono-data text-[10px] text-slate-500 mt-1 uppercase">Nov 12 • 09:30 AM</p>
+</div>
+<!-- Signal 4 -->
+<div class="relative">
+<span class="absolute -left-[32px] top-1.5 w-2 h-2 rounded-full bg-error ring-4 ring-[#0d1322]"></span>
+<p class="font-body text-sm text-slate-300">Competing L1s gained 5% market share in NFT volume this month.</p>
+<p class="mono-data text-[10px] text-slate-500 mt-1 uppercase">Nov 10 • 11:20 AM</p>
+</div>
+</div>
+<!-- CTA Card -->
+<div class="mt-12 bg-gradient-to-br from-surface-container-low to-surface-container p-6 rounded-xl border border-primary/10">
+<h6 class="font-headline italic text-lg text-white mb-2">Ready for a conviction review?</h6>
+<p class="font-body text-xs text-slate-400 mb-6 leading-relaxed">Systematic auditing prevents emotional exits. Spend 5 minutes verifying your 2028 timeline.</p>
+<button class="w-full py-3 bg-primary-container text-on-primary-container font-label font-bold text-xs uppercase tracking-widest rounded transition-all hover:bg-primary hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] active:scale-95">
+                        Start Weekly Review
+                    </button>
+</div>
+</div>
+</div>
+<!-- Decorative Anchor Element -->
+<div class="mt-24 mb-12 flex justify-center items-center gap-8 opacity-20">
+<div class="h-[1px] w-24 bg-gradient-to-r from-transparent to-slate-500"></div>
+<span class="material-symbols-outlined text-slate-400">anchor</span>
+<div class="h-[1px] w-24 bg-gradient-to-l from-transparent to-slate-500"></div>
+</div>
+</main>
+<!-- Background Noise/Texture -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay">
+<img alt="texture" class="w-full h-full object-cover" data-alt="Subtle abstract noise and grain texture with soft organic gradients of dark navy and deep charcoal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc4KVW6otzQgaH3nVc7XGf0sMCUnYmixmVAq_ll04PV3qEub3YlOg4pM_Aey4wRQM5Y-kolzcjWvLeqfwNQKBUadGECUndXEbkjBUhlQgcugBtfbeW3R1UYZzQo4dXXV4XWVVrRAV0l9Xzms-LhPQ5nGzI-opOLMWwcVsejfNiI384-ecXTwfWEqwmzSt8MKkVqoMPQ5LjCF2GL5tM0wyTD_2Zru1bmHSyN6rZV00Bbkaus1rvscRn4En_jPI-8wy3DEqveMnRC62y"/>
+</div>
+</body></html>

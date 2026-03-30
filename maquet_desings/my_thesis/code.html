@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Thesis | HoldLine</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-fixed": "#2a1700",
+            "on-secondary-container": "#b0b2ff",
+            "secondary-container": "#3131c0",
+            "primary-fixed-dim": "#4edea3",
+            "on-primary-fixed": "#002113",
+            "tertiary-container": "#e29100",
+            "on-secondary-fixed-variant": "#2f2ebe",
+            "surface-bright": "#33394a",
+            "surface-container-high": "#242a3a",
+            "secondary-fixed": "#e1e0ff",
+            "secondary": "#c0c1ff",
+            "secondary-fixed-dim": "#c0c1ff",
+            "on-tertiary": "#472a00",
+            "on-error-container": "#ffdad6",
+            "on-surface": "#dde2f8",
+            "on-primary": "#003824",
+            "on-error": "#690005",
+            "error-container": "#93000a",
+            "on-secondary-fixed": "#07006c",
+            "tertiary": "#ffb95f",
+            "surface-container-highest": "#2f3445",
+            "inverse-surface": "#dde2f8",
+            "surface-container-low": "#151b2b",
+            "on-tertiary-fixed-variant": "#653e00",
+            "surface": "#0d1322",
+            "surface-container-lowest": "#080e1d",
+            "error": "#ffb4ab",
+            "on-primary-fixed-variant": "#005236",
+            "on-secondary": "#1000a9",
+            "primary": "#4edea3",
+            "primary-fixed": "#6ffbbe",
+            "on-primary-container": "#00422b",
+            "primary-container": "#10b981",
+            "outline-variant": "#3c4a42",
+            "tertiary-fixed-dim": "#ffb95f",
+            "background": "#0d1322",
+            "outline": "#86948a",
+            "surface-container": "#191f2f",
+            "surface-tint": "#4edea3",
+            "on-surface-variant": "#bbcabf",
+            "on-tertiary-container": "#523200",
+            "on-background": "#dde2f8",
+            "inverse-on-surface": "#2a3040",
+            "inverse-primary": "#006c49",
+            "surface-dim": "#0d1322",
+            "tertiary-fixed": "#ffddb8",
+            "surface-variant": "#2f3445"
+          },
+          fontFamily: {
+            "headline": ["Newsreader", "serif"],
+            "body": ["Manrope", "sans-serif"],
+            "label": ["Space Grotesk", "monospace"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 12px;
+      height: 12px;
+      background: #4edea3;
+      cursor: pointer;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(78, 222, 163, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- SideNavBar Anchor -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-surface-dim flex flex-col py-8 px-6 border-r border-surface-container-low z-50">
+<div class="mb-12">
+<h1 class="font-headline text-xl font-bold tracking-widest text-white">HOLD / LINE</h1>
+<p class="text-[10px] tracking-[0.2em] uppercase text-outline mt-1">The Stoic Anchor</p>
+</div>
+<nav class="flex-grow space-y-4">
+<a class="flex items-center gap-4 text-slate-500 pl-4 hover:bg-surface-container-low hover:text-white transition-all py-2 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<span class="font-medium text-sm">Dashboard</span>
+</a>
+<!-- Active State: My Thesis -->
+<a class="flex items-center gap-4 text-primary border-l-2 border-primary pl-4 py-2 rounded-r-lg bg-surface-container-low transition-all group" href="#">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">description</span>
+<span class="font-medium text-sm">My Thesis</span>
+</a>
+<a class="flex items-center gap-4 text-slate-500 pl-4 hover:bg-surface-container-low hover:text-white transition-all py-2 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-xl">analytics</span>
+<span class="font-medium text-sm">Scores</span>
+</a>
+<a class="flex items-center gap-4 text-slate-500 pl-4 hover:bg-surface-container-low hover:text-white transition-all py-2 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-xl">group</span>
+<span class="font-medium text-sm">Community</span>
+</a>
+<a class="flex items-center gap-4 text-slate-500 pl-4 hover:bg-surface-container-low hover:text-white transition-all py-2 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span class="font-medium text-sm">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-8 border-t border-outline-variant/20">
+<div class="flex items-center gap-3 px-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</div>
+<div>
+<p class="text-xs font-semibold text-on-surface">Alex Rivera</p>
+<p class="text-[10px] text-outline">Pro Tier</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen flex flex-col">
+<!-- TopAppBar Anchor -->
+<header class="sticky top-0 z-40 bg-surface-dim/80 backdrop-blur-md flex justify-between items-center w-full px-12 py-6">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-6">
+<span class="font-label text-xs tracking-wider text-primary">Global Conviction Score: 78/100</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label text-xs tracking-wider text-slate-400">Market Health: Volatile but Strong</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">search</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors relative">
+          notifications
+          <span class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full border-2 border-surface"></span>
+</button>
+</div>
+</header>
+<!-- Thesis Editor Content -->
+<div class="flex-grow px-12 pb-24 max-w-5xl mx-auto w-full">
+<!-- Editorial Header -->
+<section class="mt-16 mb-20 text-center md:text-left">
+<span class="font-label text-primary text-[10px] uppercase tracking-[0.3em] mb-4 block">Current Strategic Stance</span>
+<h2 class="font-headline text-5xl md:text-6xl text-white font-bold leading-tight max-w-3xl">
+          The Decoupling of Protocol Utility from Market Speculation.
+        </h2>
+<div class="mt-8 flex items-center gap-4 text-outline">
+<span class="font-label text-xs">LAST REVISED: 2024.05.12</span>
+<span class="font-label text-xs uppercase tracking-widest text-primary/60">— Edited by Alex Rivera</span>
+</div>
+</section>
+<!-- Main Editor Shell -->
+<div class="space-y-24">
+<!-- Core Hypotheses Section -->
+<section>
+<div class="flex justify-between items-end mb-10">
+<div>
+<h3 class="font-headline text-2xl text-white italic">Core Hypotheses</h3>
+<p class="text-on-surface-variant text-sm mt-1">Foundational beliefs driving this position.</p>
+</div>
+<button class="flex items-center gap-2 text-xs font-label text-primary hover:text-white transition-colors group">
+<span class="material-symbols-outlined text-sm">add_circle</span>
+              ADD HYPOTHESIS
+            </button>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<!-- Hypothesis Card 1 -->
+<div class="bg-surface-container p-8 rounded-xl border-l-4 border-primary/20 hover:border-primary transition-all group">
+<div class="flex justify-between items-start mb-6">
+<div class="max-w-xl">
+<h4 class="font-body font-semibold text-lg text-white mb-2">Institutional Absorption of Supply</h4>
+<p class="text-on-surface-variant leading-relaxed">ETF inflows are outpacing daily issuance by a factor of 3x, creating a structural supply shock that has not yet been priced in by retail markets.</p>
+</div>
+<div class="text-right">
+<span class="font-label text-xs text-outline uppercase tracking-tighter">Conviction</span>
+<div class="font-label text-2xl text-primary">92<span class="text-xs ml-1 opacity-50">%</span></div>
+</div>
+</div>
+<div class="relative w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary shadow-[0_0_12px_rgba(78,222,163,0.3)]" style="width: 92%;"></div>
+</div>
+<input class="w-full h-1 mt-4 appearance-none bg-transparent cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity" max="100" min="0" type="range" value="92"/>
+</div>
+<!-- Hypothesis Card 2 -->
+<div class="bg-surface-container p-8 rounded-xl border-l-4 border-primary/20 hover:border-primary transition-all group">
+<div class="flex justify-between items-start mb-6">
+<div class="max-w-xl">
+<h4 class="font-body font-semibold text-lg text-white mb-2">L2 Scaling Maturity</h4>
+<p class="text-on-surface-variant leading-relaxed">The transition of liquidity to Rollups reduces mainnet friction, enabling a new class of high-throughput decentralized applications.</p>
+</div>
+<div class="text-right">
+<span class="font-label text-xs text-outline uppercase tracking-tighter">Conviction</span>
+<div class="font-label text-2xl text-primary">65<span class="text-xs ml-1 opacity-50">%</span></div>
+</div>
+</div>
+<div class="relative w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary shadow-[0_0_12px_rgba(78,222,163,0.3)]" style="width: 65%;"></div>
+</div>
+<input class="w-full h-1 mt-4 appearance-none bg-transparent cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity" max="100" min="0" type="range" value="65"/>
+</div>
+</div>
+</section>
+<!-- Counter-Arguments Section -->
+<section class="bg-surface-container-low p-12 rounded-xl border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+<h3 class="font-headline text-2xl text-white">The Steelman: Addressing Doubt</h3>
+</div>
+<div class="space-y-8">
+<div class="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[1px] before:bg-error/30">
+<h5 class="font-label text-[10px] text-error uppercase tracking-[0.2em] mb-2">Counter-Argument #1</h5>
+<p class="text-on-surface leading-relaxed italic">"The velocity of money on-chain remains at historic lows, suggesting that users are merely holding rather than transacting."</p>
+<div class="mt-4 flex gap-6">
+<div class="p-4 bg-surface rounded-lg flex-1">
+<p class="text-xs text-outline mb-2 uppercase tracking-widest">Rebuttal Strategy</p>
+<p class="text-sm text-on-surface-variant">Focus on L2 settlement volume vs. mainnet velocity as the primary metric of health.</p>
+</div>
+<div class="w-32 flex flex-col items-center justify-center border border-outline-variant/20 rounded-lg">
+<span class="text-[10px] text-outline uppercase">Threat Level</span>
+<span class="font-label text-lg text-error">MODERATE</span>
+</div>
+</div>
+</div>
+<div class="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[1px] before:bg-error/30">
+<h5 class="font-label text-[10px] text-error uppercase tracking-[0.2em] mb-2">Counter-Argument #2</h5>
+<p class="text-on-surface leading-relaxed italic">"Regulatory overhang in major jurisdictions could freeze bridge liquidity."</p>
+<div class="mt-4 bg-surface/50 p-4 rounded-lg flex items-center justify-between">
+<p class="text-sm text-on-surface-variant">Evidence gathered to address this...</p>
+<button class="text-primary text-xs font-label">EDIT RESPONSE</button>
+</div>
+</div>
+</div>
+<button class="w-full mt-10 py-4 border-2 border-dashed border-outline-variant/30 rounded-lg text-outline font-label text-xs hover:border-primary/50 hover:text-primary transition-all">
+            + DOCUMENT NEW COUNTER-ARGUMENT
+          </button>
+</section>
+<!-- Visual Analysis Anchor -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="relative aspect-video rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700" data-alt="Abstract futuristic visualization of blockchain network with glowing green nodes and dark deep navy connections in a grid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe_eJLY_EWDIezdY7PGxPX8qmdlXfAADhSbeKV8pKI8bvDrc1UxKLw9RHXO6j1J_JEdaMZpOlabdFaApbkXIHn7MWgghR3mJFb0RGPl4zX0N8fMZ706Nni0bgnYn1JgvhjJUHhifuJyGVErGnP6kaus-mqDZ-athbCiLVLRBACgum8CK1I8oKrLrNmpCJt_kXs2k-wUH_2O9OvOxKIgeSxM_8iDFgAIvPqd3TVzKA5N9jXmG8t6EDiAIGxC0lEDPbOPRvHRgGeWAby"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<span class="font-label text-[10px] text-primary tracking-widest uppercase">Network Visualization</span>
+<p class="font-headline text-lg text-white">Projected Ecosystem Growth</p>
+</div>
+</div>
+<div class="bg-surface-container p-10 rounded-xl flex flex-col justify-center">
+<div class="mb-6">
+<span class="font-label text-[10px] text-primary tracking-widest uppercase">Summary Metric</span>
+<h4 class="font-headline text-3xl text-white mt-1">Thesis Integrity</h4>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex-grow">
+<div class="flex justify-between mb-2">
+<span class="text-xs text-outline uppercase font-label">Confidence Interval</span>
+<span class="text-xs text-primary font-label">84%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full">
+<div class="h-full bg-primary" style="width: 84%"></div>
+</div>
+</div>
+<div class="w-16 h-16 rounded-full border-2 border-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">verified</span>
+</div>
+</div>
+<p class="mt-6 text-sm text-on-surface-variant leading-relaxed">Your thesis is highly resistant to current market volatility indicators. Core hypotheses remain unviolated by recent price action.</p>
+</div>
+</section>
+</div>
+<!-- Action Bar (Floating) -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3 bg-surface-container-highest/90 backdrop-blur-xl px-6 py-3 rounded-full border border-white/5 shadow-2xl z-50">
+<button class="flex items-center gap-2 bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label text-xs font-bold hover:brightness-110 transition-all">
+<span class="material-symbols-outlined text-sm">save</span>
+          SAVE CHANGES
+        </button>
+<div class="w-px h-6 bg-outline-variant/30"></div>
+<button class="p-2 text-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined">history</span>
+</button>
+</div>
+</div>
+</main>
+</body></html>

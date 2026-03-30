@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HoldLine | Scores</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;family=Space+Grotesk:wght@300..700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed": "#2a1700",
+                        "on-secondary-container": "#b0b2ff",
+                        "secondary-container": "#3131c0",
+                        "primary-fixed-dim": "#4edea3",
+                        "on-primary-fixed": "#002113",
+                        "tertiary-container": "#e29100",
+                        "on-secondary-fixed-variant": "#2f2ebe",
+                        "surface-bright": "#33394a",
+                        "surface-container-high": "#242a3a",
+                        "secondary-fixed": "#e1e0ff",
+                        "secondary": "#c0c1ff",
+                        "secondary-fixed-dim": "#c0c1ff",
+                        "on-tertiary": "#472a00",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#dde2f8",
+                        "on-primary": "#003824",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#07006c",
+                        "tertiary": "#ffb95f",
+                        "surface-container-highest": "#2f3445",
+                        "inverse-surface": "#dde2f8",
+                        "surface-container-low": "#151b2b",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "surface": "#0d1322",
+                        "surface-container-lowest": "#080e1d",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#005236",
+                        "on-secondary": "#1000a9",
+                        "primary": "#4edea3",
+                        "primary-fixed": "#6ffbbe",
+                        "on-primary-container": "#00422b",
+                        "primary-container": "#10b981",
+                        "outline-variant": "#3c4a42",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "background": "#0d1322",
+                        "outline": "#86948a",
+                        "surface-container": "#191f2f",
+                        "surface-tint": "#4edea3",
+                        "on-surface-variant": "#bbcabf",
+                        "on-tertiary-container": "#523200",
+                        "on-background": "#dde2f8",
+                        "inverse-on-surface": "#2a3040",
+                        "inverse-primary": "#006c49",
+                        "surface-dim": "#0d1322",
+                        "tertiary-fixed": "#ffddb8",
+                        "surface-variant": "#2f3445"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader"],
+                        "body": ["Manrope"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0d1322;
+            color: #dde2f8;
+            font-family: 'Manrope', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased flex overflow-hidden">
+<!-- SideNavBar Component -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-[#0d1322] flex flex-col h-full py-8 px-6 border-r border-[#151b2b] z-50">
+<div class="mb-12">
+<h1 class="font-['Newsreader'] text-xl font-bold tracking-widest text-white">HOLD / LINE</h1>
+<p class="font-['Manrope'] text-xs text-slate-500 mt-1 uppercase tracking-tighter">The Stoic Anchor</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-4 py-3 group transition-all text-slate-500 pl-4 hover:bg-[#151b2b] hover:text-white" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="dashboard">dashboard</span>
+<span class="font-['Manrope'] font-medium text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 py-3 group transition-all text-slate-500 pl-4 hover:bg-[#151b2b] hover:text-white" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="description">description</span>
+<span class="font-['Manrope'] font-medium text-sm">My Thesis</span>
+</a>
+<a class="flex items-center gap-4 py-3 group transition-all text-[#4edea3] border-l-2 border-[#4edea3] pl-4" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="analytics">analytics</span>
+<span class="font-['Manrope'] font-medium text-sm">Scores</span>
+</a>
+<a class="flex items-center gap-4 py-3 group transition-all text-slate-500 pl-4 hover:bg-[#151b2b] hover:text-white" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="group">group</span>
+<span class="font-['Manrope'] font-medium text-sm">Community</span>
+</a>
+<a class="flex items-center gap-4 py-3 group transition-all text-slate-500 pl-4 hover:bg-[#151b2b] hover:text-white" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="settings">settings</span>
+<span class="font-['Manrope'] font-medium text-sm">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-[#151b2b]">
+<div class="flex items-center gap-3 px-4 py-2 bg-[#151b2b] rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="account_circle">account_circle</span>
+<div class="overflow-hidden">
+<p class="font-['Manrope'] text-sm font-semibold truncate text-white">Alex Rivera</p>
+<p class="font-['Space+Grotesk'] text-[10px] text-slate-500">PRO VALIDATOR</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 ml-64 h-screen overflow-y-auto hide-scrollbar bg-surface-dim">
+<!-- TopAppBar Component -->
+<header class="sticky top-0 z-40 bg-[#0d1322] flex justify-between items-center w-full px-8 py-4 border-b border-[#151b2b]">
+<div class="flex items-center gap-8">
+<span class="font-['Newsreader'] text-sm font-mono text-slate-400">Global Conviction Score: <span class="text-[#4edea3]">78/100</span></span>
+<span class="font-['Newsreader'] text-sm font-mono text-slate-400">Market Health: <span class="text-[#4edea3]">Volatile but Strong</span></span>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-slate-400 hover:text-[#4edea3] transition-colors scale-95 active:duration-100">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-slate-400 hover:text-[#4edea3] transition-colors scale-95 active:duration-100 relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-primary-container rounded-full"></span>
+</button>
+</div>
+</header>
+<!-- Content Body -->
+<div class="p-12 max-w-7xl mx-auto space-y-16">
+<!-- Hero / Editorial Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
+<div class="md:col-span-8 space-y-6">
+<h2 class="font-headline text-6xl font-extrabold tracking-tight leading-tight">Weekly <br/>Psychological <span class="italic text-primary">Scores</span></h2>
+<p class="font-body text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        A clinical audit of your investment logic. We weigh your stated conviction against cold, real-world data points to reveal the truth of your market positioning.
+                    </p>
+</div>
+<div class="md:col-span-4 flex flex-col items-end">
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/15 w-full">
+<span class="font-label text-xs uppercase tracking-widest text-slate-500 block mb-4">Current Average Conviction</span>
+<div class="flex items-baseline gap-2">
+<span class="font-label text-5xl font-bold text-primary">82.4</span>
+<span class="font-label text-sm text-primary/60">%</span>
+</div>
+<div class="mt-6 h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[82.4%] relative">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_#4edea3]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Scoring Grid (Asymmetric Bento) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Left: Historical Trend Chart (Minimal) -->
+<div class="md:col-span-2 bg-surface-container rounded-xl p-8 relative overflow-hidden group border border-outline-variant/5">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h3 class="font-headline text-2xl font-bold">Historical Drift</h3>
+<p class="font-body text-sm text-on-surface-variant">Conviction variance over the last 90 days.</p>
+</div>
+<div class="flex gap-4">
+<span class="flex items-center gap-1 font-label text-xs text-primary bg-primary/10 px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-xs" data-icon="trending_up">trending_up</span> +4.2%
+                            </span>
+</div>
+</div>
+<!-- SVG Chart Simulation -->
+<div class="h-64 w-full relative">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 400 100">
+<defs>
+<lineargradient id="chartGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4edea3" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#4edea3" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,80 Q50,75 80,60 T140,50 T220,70 T300,30 T400,10 L400,100 L0,100 Z" fill="url(#chartGradient)"></path>
+<path d="M0,80 Q50,75 80,60 T140,50 T220,70 T300,30 T400,10" fill="none" stroke="#4edea3" stroke-width="2"></path>
+<!-- Floating Data Tooltip Placeholder -->
+<circle cx="300" cy="30" fill="#4edea3" r="4"></circle>
+</svg>
+<div class="absolute top-[20px] left-[310px] bg-surface-container-high px-3 py-1 rounded border border-outline-variant/20 shadow-xl">
+<span class="font-label text-xs font-bold text-white">Week 12: 89%</span>
+</div>
+</div>
+<div class="mt-8 flex justify-between border-t border-outline-variant/10 pt-6">
+<span class="font-label text-[10px] text-slate-500 uppercase">April</span>
+<span class="font-label text-[10px] text-slate-500 uppercase">May</span>
+<span class="font-label text-[10px] text-primary uppercase font-bold tracking-widest">June (Active)</span>
+</div>
+</div>
+<!-- Right: Active Hypotheses List -->
+<div class="bg-surface-container-low rounded-xl flex flex-col overflow-hidden border border-outline-variant/10">
+<div class="p-8 border-b border-outline-variant/10">
+<h3 class="font-headline text-2xl font-bold">Active Thesis</h3>
+<p class="font-body text-sm text-on-surface-variant">Live alignment score tracking.</p>
+</div>
+<div class="flex-1 divide-y divide-outline-variant/10 overflow-y-auto hide-scrollbar">
+<!-- List Item 1 -->
+<div class="p-6 hover:bg-surface-container transition-colors group">
+<div class="flex justify-between items-start mb-2">
+<span class="font-body text-sm font-semibold group-hover:text-primary transition-colors">ETH Scaling Saturation</span>
+<span class="font-label text-lg font-bold text-white">92</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label text-[10px] text-slate-500 uppercase tracking-widest">High Confidence</span>
+<span class="material-symbols-outlined text-xs text-primary" data-icon="check_circle">check_circle</span>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="p-6 hover:bg-surface-container transition-colors group">
+<div class="flex justify-between items-start mb-2">
+<span class="font-body text-sm font-semibold group-hover:text-primary transition-colors">L2 Interoperability Layer</span>
+<span class="font-label text-lg font-bold text-white">74</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label text-[10px] text-slate-500 uppercase tracking-widest">Mild Friction</span>
+<span class="material-symbols-outlined text-xs text-tertiary" data-icon="warning">warning</span>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="p-6 hover:bg-surface-container transition-colors group">
+<div class="flex justify-between items-start mb-2">
+<span class="font-body text-sm font-semibold group-hover:text-primary transition-colors">Macro-Liquidity Pivot</span>
+<span class="font-label text-lg font-bold text-white">61</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label text-[10px] text-slate-500 uppercase tracking-widest">Structural Weakness</span>
+<span class="material-symbols-outlined text-xs text-error" data-icon="error">error</span>
+</div>
+</div>
+<!-- List Item 4 -->
+<div class="p-6 hover:bg-surface-container transition-colors group">
+<div class="flex justify-between items-start mb-2">
+<span class="font-body text-sm font-semibold group-hover:text-primary transition-colors">Zero-Knowledge Proof Adoption</span>
+<span class="font-label text-lg font-bold text-white">88</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label text-[10px] text-slate-500 uppercase tracking-widest">Accelerating</span>
+<span class="material-symbols-outlined text-xs text-primary" data-icon="bolt">bolt</span>
+</div>
+</div>
+</div>
+<button class="w-full py-4 font-label text-xs uppercase tracking-widest text-primary border-t border-outline-variant/10 hover:bg-primary/5 transition-colors">
+                        View All Active Logic
+                    </button>
+</div>
+</section>
+<!-- Data Influence Breakdown (High-End Asymmetry) -->
+<section class="space-y-8">
+<div class="flex items-end justify-between">
+<div class="max-w-xl">
+<h3 class="font-headline text-3xl font-bold mb-4">The Evidence Wall</h3>
+<p class="font-body text-on-surface-variant">Every score is derived from a composite of deterministic data points. Transparency is the antidote to emotional trading.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- Data Point Card 1 -->
+<div class="bg-surface-container p-6 rounded-xl border-l-4 border-secondary-container">
+<div class="flex items-center gap-2 mb-4 text-[#6366F1]">
+<span class="material-symbols-outlined text-sm" data-icon="dataset">dataset</span>
+<span class="font-label text-[10px] uppercase font-bold tracking-widest">On-Chain Flow</span>
+</div>
+<h4 class="font-body text-lg font-bold mb-2">Net Exchange Outflow</h4>
+<p class="font-body text-xs text-slate-400 mb-6 leading-relaxed">Large wallet movement signals accumulation phase, supporting high scores for core thesis A.</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
+<span class="font-label text-xs text-primary-fixed-dim">Influence: 40%</span>
+<span class="material-symbols-outlined text-xs text-slate-600" data-icon="info">info</span>
+</div>
+</div>
+<!-- Data Point Card 2 -->
+<div class="bg-surface-container p-6 rounded-xl border-l-4 border-secondary-container">
+<div class="flex items-center gap-2 mb-4 text-[#6366F1]">
+<span class="material-symbols-outlined text-sm" data-icon="neurology">neurology</span>
+<span class="font-label text-[10px] uppercase font-bold tracking-widest">Sentiment API</span>
+</div>
+<h4 class="font-body text-lg font-bold mb-2">Dev Activity Growth</h4>
+<p class="font-body text-xs text-slate-400 mb-6 leading-relaxed">GitHub commits on top 5 L2s up 12% MoM. Long-term structural integrity rising.</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
+<span class="font-label text-xs text-primary-fixed-dim">Influence: 25%</span>
+<span class="material-symbols-outlined text-xs text-slate-600" data-icon="info">info</span>
+</div>
+</div>
+<!-- Data Point Card 3 -->
+<div class="bg-surface-container p-6 rounded-xl border-l-4 border-secondary-container">
+<div class="flex items-center gap-2 mb-4 text-[#6366F1]">
+<span class="material-symbols-outlined text-sm" data-icon="language">language</span>
+<span class="font-label text-[10px] uppercase font-bold tracking-widest">Macro Data</span>
+</div>
+<h4 class="font-body text-lg font-bold mb-2">CPI Stability Index</h4>
+<p class="font-body text-xs text-slate-400 mb-6 leading-relaxed">Inflationary cooling permits risk-on posture. Neutral pressure on active scores.</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
+<span class="font-label text-xs text-primary-fixed-dim">Influence: 20%</span>
+<span class="material-symbols-outlined text-xs text-slate-600" data-icon="info">info</span>
+</div>
+</div>
+<!-- Data Point Card 4 -->
+<div class="bg-surface-container p-6 rounded-xl border-l-4 border-secondary-container">
+<div class="flex items-center gap-2 mb-4 text-[#6366F1]">
+<span class="material-symbols-outlined text-sm" data-icon="shield">shield</span>
+<span class="font-label text-[10px] uppercase font-bold tracking-widest">Validator Health</span>
+</div>
+<h4 class="font-body text-lg font-bold mb-2">Staking Yield Ratio</h4>
+<p class="font-body text-xs text-slate-400 mb-6 leading-relaxed">Diminishing returns on liquid staking suggest a shift in yield expectations.</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-outline-variant/10">
+<span class="font-label text-xs text-primary-fixed-dim">Influence: 15%</span>
+<span class="material-symbols-outlined text-xs text-slate-600" data-icon="info">info</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Context / Recommendation -->
+<section class="bg-primary/5 rounded-2xl p-12 border border-primary/10 flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 space-y-4">
+<div class="bg-primary-container/20 text-primary w-fit px-4 py-1 rounded-full font-label text-[10px] uppercase font-bold tracking-tighter">
+                        Stoic Recommendation
+                    </div>
+<h3 class="font-headline text-4xl font-bold">No Action Required</h3>
+<p class="font-body text-on-surface-variant text-lg">Your data-to-conviction ratio is within the optimal green zone. Emotional volatility is low. Maintain current positions and ignore the noise of the daily candle.</p>
+</div>
+<div class="w-full md:w-auto">
+<button class="bg-primary text-on-primary font-label text-sm font-bold uppercase tracking-widest px-10 py-5 rounded-lg shadow-[0_0_20px_rgba(78,222,163,0.3)] hover:scale-105 transition-transform active:scale-95">
+                        Download Weekly Audit
+                    </button>
+</div>
+</section>
+</div>
+<!-- Footer / Space Filler -->
+<footer class="p-12 border-t border-outline-variant/10 text-center">
+<p class="font-label text-[10px] text-slate-600 uppercase tracking-[0.2em]">HoldLine © 2024 — Non-Custodial Intelligence</p>
+</footer>
+</main>
+<!-- Contextual FAB (Suppressed based on rules, not rendered for Scores page) -->
+</body></html>

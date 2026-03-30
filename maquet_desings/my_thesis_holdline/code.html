@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HoldLine | My Thesis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&amp;family=Manrope:wght@200..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container": "#191f2f",
+                        "surface-bright": "#33394a",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "surface-variant": "#2f3445",
+                        "secondary": "#c0c1ff",
+                        "on-tertiary-fixed": "#2a1700",
+                        "surface-container-high": "#242a3a",
+                        "background": "#0d1322",
+                        "on-tertiary": "#472a00",
+                        "error": "#ffb4ab",
+                        "primary": "#4edea3",
+                        "surface-container-highest": "#2f3445",
+                        "on-surface-variant": "#bbcabf",
+                        "outline": "#86948a",
+                        "primary-container": "#10b981",
+                        "inverse-on-surface": "#2a3040",
+                        "inverse-primary": "#006c49",
+                        "primary-fixed-dim": "#4edea3",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary": "#1000a9",
+                        "on-surface": "#dde2f8",
+                        "on-secondary-container": "#b0b2ff",
+                        "surface-dim": "#0d1322",
+                        "secondary-fixed": "#e1e0ff",
+                        "primary-fixed": "#6ffbbe",
+                        "on-primary-fixed": "#002113",
+                        "tertiary-container": "#e29100",
+                        "inverse-surface": "#dde2f8",
+                        "surface-tint": "#4edea3",
+                        "surface": "#0d1322",
+                        "secondary-fixed-dim": "#c0c1ff",
+                        "on-primary-container": "#00422b",
+                        "on-primary": "#003824",
+                        "on-background": "#dde2f8",
+                        "surface-container-low": "#151b2b",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#523200",
+                        "on-secondary-fixed": "#07006c",
+                        "surface-container-lowest": "#080e1d",
+                        "tertiary": "#ffb95f",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "on-primary-fixed-variant": "#005236",
+                        "tertiary-fixed": "#ffddb8",
+                        "secondary-container": "#3131c0",
+                        "outline-variant": "#3c4a42",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#2f2ebe"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Space Grotesk", "monospace"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0d1322;
+            color: #dde2f8;
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="flex min-h-screen">
+<!-- SideNavBar (Authority Source: JSON & Design System) -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-[#0d1322] flex flex-col py-8 px-6 border-r border-[#151b2b] z-50">
+<div class="mb-12">
+<h1 class="font-['Newsreader'] text-xl font-bold tracking-widest text-white">
+                HOLD <span class="text-[#4edea3]">/ LINE</span>
+</h1>
+<p class="text-slate-500 text-xs mt-1 font-body">The Stoic Anchor</p>
+</div>
+<nav class="flex-1 space-y-6">
+<a class="flex items-center gap-4 text-slate-500 pl-4 hover:bg-[#151b2b] hover:text-white transition-all py-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium text-sm">Dashboard</span>
+</a>
+<!-- Active State Logic: My Thesis is the current page -->
+<a class="flex items-center gap-4 text-[#4edea3] border-l-2 border-[#4edea3] pl-4 hover:bg-[#151b2b] transition-all py-2 rounded-r-lg" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-medium text-sm">My Thesis</span>
+</a>
+<a class="flex items-center gap-4 text-slate-500 pl-4 hover:bg-[#151b2b] hover:text-white transition-all py-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-medium text-sm">Scores</span>
+</a>
+<a class="flex items-center gap-4 text-slate-500 pl-4 hover:bg-[#151b2b] hover:text-white transition-all py-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-medium text-sm">Community</span>
+</a>
+</nav>
+<div class="mt-auto space-y-6">
+<a class="flex items-center gap-4 text-slate-500 pl-4 hover:bg-[#151b2b] hover:text-white transition-all py-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-medium text-sm">Settings</span>
+</a>
+<div class="pt-6 border-t border-[#151b2b] flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="account_circle">account_circle</span>
+</div>
+<span class="font-medium text-sm text-on-surface">Alex Rivera</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 flex-1 bg-[#0d1322] min-h-screen">
+<!-- TopAppBar (Simulated Integration) -->
+<header class="flex justify-between items-center w-full px-12 py-8 bg-[#0d1322]">
+<div class="space-y-1">
+<h2 class="font-headline text-5xl text-white font-bold leading-tight">My Thesis</h2>
+<p class="font-body text-slate-400 text-lg max-w-xl">Describe why you invest. The AI structures it into verifiable hypotheses.</p>
+</div>
+<div class="flex flex-col items-end gap-3">
+<div class="px-3 py-1 border border-primary text-primary text-[10px] font-label uppercase tracking-widest rounded-full">
+                    Last updated: March 28, 2026
+                </div>
+<div class="flex gap-4 text-slate-400">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors" data-icon="search">search</span>
+</div>
+</div>
+</header>
+<!-- Content Grid (60/40 Split) -->
+<div class="px-12 pb-24 grid grid-cols-12 gap-12">
+<!-- Left Column: Primary Thesis & Hypotheses -->
+<div class="col-span-7 space-y-12">
+<!-- Investment Thesis Card -->
+<section class="bg-[#151b2b] p-8 rounded-xl relative overflow-hidden">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-2 text-primary font-label text-xs uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+                            Investment thesis
+                        </div>
+</div>
+<div class="font-body text-slate-300 text-lg leading-relaxed mb-8">
+                        I invest in Ethereum because I believe Layer 2 solutions will absorb the majority of global transaction volume by 2028. The EIP-4844 upgrade has reduced L2 costs by 90%, making them competitive with traditional payment rails. As adoption grows, ETH demand increases through staking and fee burns.
+                    </div>
+<div class="flex gap-4">
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-md font-body font-bold text-sm hover:opacity-90 transition-opacity">
+                            Update thesis
+                        </button>
+<button class="border border-outline-variant text-slate-400 px-6 py-2.5 rounded-md font-body font-bold text-sm hover:text-white transition-colors">
+                            View history
+                        </button>
+</div>
+</section>
+<!-- AI Hypotheses Section -->
+<section class="space-y-6">
+<h3 class="font-headline text-2xl text-white italic">AI-Generated Hypotheses</h3>
+<div class="space-y-4">
+<!-- Hypothesis 1 -->
+<div class="flex bg-surface-container rounded-lg overflow-hidden border-l-4 border-primary group">
+<div class="flex-1 p-6">
+<p class="text-white font-body text-lg mb-2">L2 adoption will absorb global transaction volume</p>
+<div class="flex items-center gap-4 text-xs font-label text-slate-500 uppercase tracking-tighter">
+<span>Source: news + on-chain data</span>
+<a class="text-primary/60 hover:text-primary transition-colors flex items-center gap-1" href="#">
+                                        Edit hypothesis <span class="material-symbols-outlined text-xs" data-icon="north_east">north_east</span>
+</a>
+</div>
+</div>
+<div class="w-32 flex items-center justify-center bg-surface-container-high font-label text-3xl font-bold text-primary border-l border-outline-variant/10">
+                                78%
+                            </div>
+</div>
+<!-- Hypothesis 2 -->
+<div class="flex bg-surface-container rounded-lg overflow-hidden border-l-4 border-primary group">
+<div class="flex-1 p-6">
+<p class="text-white font-body text-lg mb-2">ETH staking yield remains above 4% annually</p>
+<div class="flex items-center gap-4 text-xs font-label text-slate-500 uppercase tracking-tighter">
+<span>Source: news + on-chain data</span>
+<a class="text-primary/60 hover:text-primary transition-colors flex items-center gap-1" href="#">
+                                        Edit hypothesis <span class="material-symbols-outlined text-xs" data-icon="north_east">north_east</span>
+</a>
+</div>
+</div>
+<div class="w-32 flex items-center justify-center bg-surface-container-high font-label text-3xl font-bold text-primary border-l border-outline-variant/10">
+                                85%
+                            </div>
+</div>
+<!-- Hypothesis 3 -->
+<div class="flex bg-surface-container rounded-lg overflow-hidden border-l-4 border-tertiary-container group">
+<div class="flex-1 p-6">
+<p class="text-white font-body text-lg mb-2">Mass L2 adoption timeline: before 2028</p>
+<div class="flex items-center gap-4 text-xs font-label text-slate-500 uppercase tracking-tighter">
+<span>Source: news + on-chain data</span>
+<a class="text-primary/60 hover:text-primary transition-colors flex items-center gap-1" href="#">
+                                        Edit hypothesis <span class="material-symbols-outlined text-xs" data-icon="north_east">north_east</span>
+</a>
+</div>
+</div>
+<div class="w-32 flex items-center justify-center bg-surface-container-high font-label text-3xl font-bold text-tertiary-container border-l border-outline-variant/10">
+                                45%
+                            </div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Metadata & Proof -->
+<div class="col-span-5 space-y-8">
+<!-- Thesis Metadata Card -->
+<div class="bg-surface-container p-8 rounded-xl">
+<h4 class="font-label text-xs uppercase tracking-[0.2em] text-slate-500 mb-8">Thesis Metadata</h4>
+<div class="space-y-6">
+<div class="flex justify-between items-center">
+<span class="text-slate-400 font-body">Asset</span>
+<div class="flex items-center gap-2 text-white font-bold">
+<img alt="Ethereum logo" class="w-5 h-5 opacity-80" data-alt="close-up of the ethereum diamond logo in silver metallic finish against dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEmgKGIN4tQ3gNBmbcaoN2wXbGY6eTO0eWQX8q2p5OGYS86zjVSbfR1ThCKp6RZ3aA30dDAYPcvwq9hnSKcxDs42sGGfFXLITQxhjGLLg0fInI3SlbumsvXEKHw7-Nc0csMt8483nrgBJtyDfoJ7J3KPQZ_xQfMRaO841cXJr99_h7xMSeza3adk0rmH2oJ93psWbG-bQ448J-8px1YhlAPgphDr4WGhD0NKGCcK3HwjKPJU7vucYo__1YD5BX9TUN4In2ZKgO2jtI"/>
+                                ETH
+                            </div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-slate-400 font-body">Strategy</span>
+<span class="text-white font-bold">Long-term hold / DCA</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-slate-400 font-body">Time horizon</span>
+<span class="text-white font-bold">2-3 years</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-slate-400 font-body">Risk tolerance</span>
+<span class="text-white font-bold">Moderate</span>
+</div>
+</div>
+</div>
+<!-- Conviction Timeline Card -->
+<div class="bg-surface-container p-8 rounded-xl overflow-hidden">
+<h4 class="font-label text-xs uppercase tracking-[0.2em] text-slate-500 mb-4">Conviction Timeline</h4>
+<div class="flex items-end gap-2 h-20 mb-4">
+<div class="flex-1 bg-primary/10 rounded-t-sm h-[71%] relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-label text-primary opacity-0 group-hover:opacity-100 transition-opacity">71%</div>
+</div>
+<div class="flex-1 bg-primary/20 rounded-t-sm h-[73%] relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-label text-primary opacity-0 group-hover:opacity-100 transition-opacity">73%</div>
+</div>
+<div class="flex-1 bg-primary/40 rounded-t-sm h-[76%] relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-label text-primary opacity-0 group-hover:opacity-100 transition-opacity">76%</div>
+</div>
+<div class="flex-1 bg-primary/30 rounded-t-sm h-[74%] relative group">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-label text-primary opacity-0 group-hover:opacity-100 transition-opacity">74%</div>
+</div>
+</div>
+<p class="text-slate-400 text-sm font-body italic">Your conviction has been stable this month</p>
+</div>
+<!-- ENS Conviction Proof Card -->
+<div class="border border-primary/40 bg-primary/5 p-8 rounded-xl relative">
+<div class="absolute -top-3 left-8 bg-background px-4 py-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="verified_user">verified_user</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-primary">On-chain Proof</span>
+</div>
+<div class="space-y-4">
+<p class="text-on-surface font-body text-sm">Your thesis hash is recorded on-chain via ENS text records</p>
+<div class="bg-background/80 p-4 rounded border border-outline-variant/30 font-label text-[11px] text-primary/80 break-all leading-relaxed">
+                            alex.eth → holdline.thesis = 0x8f4a7c...8821
+                        </div>
+<div class="flex items-center gap-2 text-primary/60 font-label text-[10px] uppercase tracking-widest">
+<span class="material-symbols-outlined text-xs" data-icon="schedule">schedule</span>
+                            Timestamped: March 4, 2026
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Background Decoration (Stoic Anchor Style) -->
+<div class="fixed inset-0 pointer-events-none -z-10 opacity-10">
+<div class="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-primary/20 to-transparent blur-[120px]"></div>
+<div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-surface-container-highest/40 to-transparent blur-[100px]"></div>
+</div>
+</body></html>
